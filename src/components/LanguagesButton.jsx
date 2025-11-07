@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LanguagesCard from "./LanguagesCard";
 
 const languages = [
     {
@@ -37,17 +38,20 @@ export default function LanguagesButton() {
     const [selectedLang, setSelectedLang] = useState(null);
 
     return (
-        <div className="mb-4">
-            {languages.map((lang) => (
-                <button
-                    key={lang.id}
-                    className={`btn m-1 ${selectedLang && selectedLang.id === lang.id ? "btn-warning" : "btn-primary"
-                        }`}
-                    onClick={() => setSelectedLang(lang)}
-                >
-                    {lang.title}
-                </button>
-            ))}
-        </div>
+        <>
+            <div className="mb-4">
+                {languages.map((lang) => (
+                    <button
+                        key={lang.id}
+                        className={`btn m-1 ${selectedLang && selectedLang.id === lang.id ? "btn-warning" : "btn-primary"
+                            }`}
+                        onClick={() => setSelectedLang(lang)}
+                    >
+                        {lang.title}
+                    </button>
+                ))}
+            </div>
+            <LanguagesCard language={selectedLang} />
+        </>
     );
 }

@@ -17,6 +17,7 @@ function App() {
             <button className="btn btn-primary">Express</button>
             <button className="btn btn-primary">React.js</button>
             <div className="border border-1 border-dark rounded-3 p-3 my-4">
+              <h5>HTML</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis, amet aliquid aut hic tempore laborum quae nobis? Optio, odit.</p>
             </div>
           </div>
